@@ -24,7 +24,7 @@ class LlamaIndexVectorizer(BaseVectorizer):
         self, embed_model: BaseEmbedding, embedding_dims: int, dtype: str = "float32"
     ):
         super().__init__(
-            model="gemini-embedding-001",
+            model=embed_model.model_name,
             dims=embedding_dims,
             dtype=dtype,
             embed_model=embed_model,
